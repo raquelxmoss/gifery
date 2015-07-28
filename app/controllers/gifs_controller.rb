@@ -14,12 +14,22 @@ class GifsController < ApplicationController
   end
 
   def create
-    @gif = Gif.new
+    if @gif = Gif.create(gif_params)
+      create_tags
+      redirect_to gifs_path
+    else
+      render :new
+    end
   end
 
   private
 
-  def tag_attributes=(attributes)
+  def gif_params
+    params.require(:gif).permit(:url)
+  end
+
+  def create_tags
+    @gif.tags.create(name: params[:gif][:tags][:name])
   end
 
 end

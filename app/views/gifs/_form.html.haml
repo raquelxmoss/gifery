@@ -3,5 +3,5 @@
   = f.text_field :url
   = f.fields_for :tags do |tag_form|
     = tag_form.label :tags
-    = tag_form.text_field :tags
+    = tag_form.text_field :name
   = f.submit 'Save'

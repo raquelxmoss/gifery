@@ -29,7 +29,10 @@ class GifsController < ApplicationController
   end
 
   def create_tags
-    @gif.tags.create(name: params[:gif][:tags][:name])
+    tag_string = params[:gif][:tags][:name]
+    tag_string.split(",").each do |tag|
+      @gif.tags.create(name: tag.strip)
+    end
   end
 
 end

@@ -1,28 +1,16 @@
-== README
+== Gifery
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Currently, Gifery is a whole lot of nothing, but I have some grand plans.
 
-Things you may want to cover:
+Users will be able to save and tag gifs from anywhere on the web, then access their gif library whenever they need to. No more saving gifs to a folder on your desktop like some sort of cavewoman.
 
-* Ruby version
+=== MVP
+A chrome extension that talks to an API and allows users to save, tag, and search their gifs. Gif urls can be inserted into a Facebook status, Tweet, or insightful Reddit comment with just one click.
 
-* System dependencies
+=== Eventually
+World domination, obviously.
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Failing that:
+- More 3rd party integrations (Slack, iOS native app, Android App, Firefox extension, you get the idea)
+- Search everyone's libraries by tag
+- Hell, I don't know. Maybe Giphy or Reactiongifs or Reddit would want this. For reasons. 

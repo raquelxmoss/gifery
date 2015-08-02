@@ -11,14 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150802031850) do
+ActiveRecord::Schema.define(version: 20150802041349) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "gifs", force: :cascade do |t|
     t.string   "url"
-    t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -37,8 +36,8 @@ ActiveRecord::Schema.define(version: 20150802031850) do
     t.datetime "updated_at", null: false
   end
 
-  # add_index "user_gifs", ["gif_id"], name: "index_user_gifs_on_gif_id", using: :btree
-  # add_index "user_gifs", ["user_id"], name: "index_user_gifs_on_user_id", using: :btree
+  add_index "user_gifs", ["gif_id"], name: "index_user_gifs_on_gif_id", using: :btree
+  add_index "user_gifs", ["user_id"], name: "index_user_gifs_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

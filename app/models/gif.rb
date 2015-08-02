@@ -1,5 +1,5 @@
 class Gif < ActiveRecord::Base
-  has_many :users
+  has_many :user_gifs
   has_many :users, through: :user_gifs
   has_many :tags
 

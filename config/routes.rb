@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   devise_for :users
 
   get 'api/v1/save-gif', to: 'api#save_gif', as: 'save_gif'
+  get 'api/v1/tag-gif', to: 'api#tag_gif', as: 'tag_gif'
+
 end

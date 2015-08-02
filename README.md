@@ -1,13 +1,13 @@
-== Gifery
+# Gifery
 
 Currently, Gifery is a whole lot of nothing, but I have some grand plans.
 
-Users will be able to save and tag gifs from anywhere on the web, then access their gif library whenever they need to. No more saving gifs to a folder on your desktop like some sort of cavewoman.
+Users will be able to save and tag gifs from anywhere on the web, then access their gif library whenever they need to. No more saving gifs to a folder on your desktop like some sort of cavewoman. It's basically [Pocket](http://www.getpocket.com) for gifs. 
 
-=== MVP
+## MVP
 A chrome extension that talks to an API and allows users to save, tag, and search their gifs. Gif urls can be inserted into a Facebook status, Tweet, or insightful Reddit comment with just one click.
 
-=== Eventually
+## Eventually
 World domination, obviously.
 
 Failing that:

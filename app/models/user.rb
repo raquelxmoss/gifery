@@ -4,5 +4,6 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   has_many :gifs
+  has_many :gifs, through: :user_gifs
   has_many :tags, through: :gifs
 end

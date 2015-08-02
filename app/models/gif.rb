@@ -1,4 +1,7 @@
 class Gif < ActiveRecord::Base
-  belongs_to :user
+  has_many :users
+  has_many :users, through: :user_gifs
   has_many :tags
+
+  validates :url, uniqueness: true
 end

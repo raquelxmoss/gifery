@@ -14,7 +14,7 @@ class GifsController < ApplicationController
   end
 
   def create
-    if @gif = Gif.create(gif_params)
+    if @gif = Gif.find_or_create_by(gif_params)
       create_tags
       redirect_to gifs_path
     else

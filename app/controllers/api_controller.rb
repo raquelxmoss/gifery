@@ -5,11 +5,10 @@ class ApiController < ActionController::Base
     if @gif = Gif.create(url: params[:url], user_id: params[:user_id])
       render json: @gif
     else
-      render json: {
-        error: "Sorry, something went wrong with your request. Please check the API documentation and try again.",
-        status: 400
-      },
-      status: 400
+      render json:
+      {
+        error: "Sorry, something went wrong with your request. Please check the API documentation and try again."
+      }
     end
   end
 
@@ -18,9 +17,21 @@ class ApiController < ActionController::Base
   end
 
   def delete_gif
+    gif = Gif.find(params[:id]) rescue nil
+    if gif
+      gif.destroy
+      render json: {
+        message: "Gif deleted"
+      }
+    else
+      render json: {
+        error: "Sorry, we couldn't find that gif"
+      }
+    end
   end
 
   def delete_tag
+
   end
 
 end

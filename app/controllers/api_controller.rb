@@ -17,8 +17,7 @@ class ApiController < ActionController::Base
   end
 
   def delete_gif
-    gif = UserGif.find(params[:id]) rescue nil
-    if gif
+    if gif = UserGif.find_by(id: params[:id])
       gif.destroy
       render json: {
         message: "Gif deleted"

@@ -1,5 +1,5 @@
 class Tag < ActiveRecord::Base
-  belongs_to :gif
+  belongs_to :user_gif
   validates :name, uniqueness: true
   before_create :downcaseify
 

@@ -24,7 +24,7 @@ gem 'devise'
 
 gem 'haml'
 gem 'haml-rails'
-gem "pure-css-rails"
+gem 'pure-css-rails'
 
 
 # Use Capistrano for deployment

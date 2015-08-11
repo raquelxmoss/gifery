@@ -24,7 +24,7 @@ class Api::UserGifsController < ApplicationController
 
   def show
     @gif = UserGif.find_by(id: params[:id])
-    render json: @gif
+    render json: @gif.gif
   end
 
   private

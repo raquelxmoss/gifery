@@ -2,7 +2,7 @@ class Api::UserGifsController < ApplicationController
 
   def create
     if @gif = UserGif.create(gif: Gif.find_or_create_by(url: params[:url]), user: User.find(params[:user_id]))
-      render json: @gif
+      render :show
     else
       generic_error
     end
@@ -24,7 +24,6 @@ class Api::UserGifsController < ApplicationController
 
   def show
     @gif = UserGif.find_by(id: params[:id])
-    render json: @gif.gif
   end
 
   private

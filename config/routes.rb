@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   root 'application#index'
   devise_for :users
-  resources :user_gifs
+  resources :users, only: [:show, :index] do
+    resources :user_gifs
+  end
   resources :gifs, only: [:index, :show]
 
   namespace :api do

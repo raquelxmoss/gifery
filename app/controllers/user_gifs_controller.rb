@@ -4,6 +4,7 @@ class UserGifsController < ApplicationController
   before_action :load_user_and_gif, only: [:show, :update, :edit, :destroy]
 
   def index
+    # this works
     @gifs = UserGif.where(user: current_user).collect(&:gif)
   end
 

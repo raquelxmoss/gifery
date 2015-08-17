@@ -14,9 +14,7 @@ class Api::UserGifsController < ApplicationController
   def destroy
     if gif = UserGif.find_by(id: params[:id])
       gif.destroy
-      render json: {
-        message: "Gif deleted"
-      }
+      render json: { message: "Gif deleted 😢" }
     else
       generic_error
     end
@@ -26,12 +24,10 @@ class Api::UserGifsController < ApplicationController
     @gif = UserGif.find_by(id: params[:id])
   end
 
-  private
 
+  private
   def generic_error
-    render json: {
-      error: "Sorry, something went wrong with your request. Please check the API documentation and try again"
-    }
+    render json: { error: "Sorry, something went wrong with your request. Please check the API documentation and try again" }
   end
 
 end

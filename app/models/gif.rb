@@ -1,7 +1,5 @@
 class Gif < ActiveRecord::Base
-  has_many :user_gifs
-  has_many :users, through: :user_gifs
-
+  has_and_belongs_to_many :users
   validates :url, uniqueness: true
 
   def is_gifv?

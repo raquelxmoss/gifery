@@ -9,6 +9,6 @@ Rails.application.routes.draw do
         resources :sessions, only: [:create, :destroy]
       end
     end
-  # devise_for :users
+  devise_for :users
 end
 

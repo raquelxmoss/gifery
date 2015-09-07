@@ -7,7 +7,7 @@ class Api::V1::GifsController < ApplicationController
   end
 
   def index
-    respond_with Gif.all
+    respond_with current_user.gifs
   end
 
   def create

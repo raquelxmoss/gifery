@@ -11,7 +11,7 @@ class Api::V1::UsersController < ApplicationController
     user = User.new(user_params)
     if user.save
       sign_in(user)
-      render json: user, status: 201, location: api_user(user)
+      render json: user, status: 201, location: [:api, user]
     else
       render json: { errors: user.errors }, status: 422
     end

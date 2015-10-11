@@ -5,4 +5,7 @@ class ApplicationController < ActionController::Base
 
   include Authenticable
 
+  def index
+  end
+
 end
